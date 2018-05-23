@@ -1,0 +1,30 @@
+{
+  "name": "status-bar",
+  "version": "0.0.0",
+  "description": "Via status bar.",
+  "main": "./lib/main",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "via",
+    "trading",
+    "status",
+    "bar"
+  ],
+  "repository": "https://github.com/via-platform/status-bar",
+  "author": "Dakota Gordon",
+  "engines": {
+    "via": "*"
+  },
+  "dependencies": {},
+  "configSchema": {},
+  "providedServices": {
+    "status-bar": {
+      "description": "A container for indicators and buttons at the bottom of the workspace.",
+      "versions": {
+        "0.1.0": "provideStatusBar"
+      }
+    }
+  }
+}

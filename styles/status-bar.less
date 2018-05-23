@@ -1,0 +1,51 @@
+@import "variables";
+
+@status-bar-height:           28px;
+
+@status-bar-text-size:        13px;
+@status-bar-background-color: @header-background-color;//#21252b;
+@status-bar-border-color:     @pane-border-color;
+@status-bar-border-width:     0px;
+
+.status-bar
+{
+    display: flex;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    font-size: @status-bar-text-size;
+    background: @status-bar-background-color;
+    height: @status-bar-height + @status-bar-border-width;
+    transition: border-color ease 0.2s;
+    // border-top: @status-bar-border-width solid @pane-border-color;
+    -webkit-user-select: none;
+    -webkit-app-region: drag;
+    z-index: 1080;
+
+    .status
+    {
+        flex: 0 1 auto;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
+
+    .toolbar-button
+    {
+        height: 28px;
+        line-height: 28px;
+        font-weight: 700;
+    }
+}
+
+.status-bar-left, .status-bar-right
+{
+    flex: 1;
+    display: flex;
+}
+
+.status-bar-right
+{
+    justify-content: flex-end;
+}
